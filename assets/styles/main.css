@@ -50,7 +50,7 @@ body {
 
 header {
     position: relative;
-    height: 850px;
+    min-height: 850px;
     width: 100%;
     padding-bottom: 1px;
     background-image: url("../images/headerBackground.png");
@@ -123,9 +123,11 @@ nav a {
     position: relative;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 32px;
     max-width: 1320px;
     margin: 230px auto 0;
-    padding: 0 20px;
+    padding: 0 20px 60px;
     z-index: 1;
 }
 
@@ -177,6 +179,8 @@ nav a {
 }
 
 .feedback-form {
+    width: 380px;
+    max-width: 100%;
     align-self: flex-start;
     border-radius: 10px;
     overflow: hidden;
@@ -187,7 +191,6 @@ nav a {
     color:#fff;
     font-size: 23px;
     font-weight: 700;
-    width: 380px;
     text-align: center;
     padding: 30px;
     background: linear-gradient(to bottom, #6A32B4 0%, #552693 100%);
@@ -310,7 +313,7 @@ nav a {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 728px;
+    min-height: 728px;
     margin-top: 130px;
     background-image: url("../images/manufacturersBackground.svg");
     background-size: cover;
@@ -353,8 +356,9 @@ nav a {
 
 .manufacturers-section_container {
     max-width: 1320px;
+    width: 100%;
     margin: auto;
-    padding: 0 20px;
+    padding: 70px 20px;
 
 }
 
@@ -424,7 +428,7 @@ nav a {
 
 .how-it-works-section {
     width: 100%;
-    height: 1100px;
+    min-height: 1100px;
     background-image: url("../images/howItWorksBackground.png");
     background-position: top;
     background-repeat: no-repeat;
@@ -455,6 +459,7 @@ nav a {
 
 .how-it-works-items {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     margin-top: 46px;
 }
@@ -493,6 +498,7 @@ nav a {
     color:#E3E3E3;
     line-height: 25px;
     margin-top: 28px;
+    padding-left: 58px;
 }
 
 .how-it-works-item.item-1 {
@@ -546,16 +552,33 @@ nav a {
     width: 100%;
     min-height: 1270px;
     margin-top: -60px;
-    background-image:url("../images/faqBackground.svg"), url("../images/faqBackground2.svg");
+    padding-top: 60px;
+    background-image: url("../images/faqBackground2.svg");
+    background-position:  top 1808px right;
+    background-repeat: repeat-y;
+    background-clip: content-box;
+}
+
+.faq-section::after {
+    position: absolute;
+    content: '';
+    top:0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 1920px;
+    background-image:url("../images/faqBackground.svg");
     background-size: 100% 1810px;
-    background-position: top right, top 1808px right;
+    background-position: top right;
     background-repeat: no-repeat;
 }
 
 .faq-section_container {
+    position: relative;
+    z-index: 1;
     max-width: 1320px;
     margin: auto;
-    padding: 130px 20px;
+    padding: 70px 20px;
 }
 
 .faq-section_container h2 {
@@ -619,6 +642,7 @@ nav a {
     background-color: #757AEF;
     cursor: pointer;
     user-select: none;
+    flex-shrink: 0;
 }
 
 .faq-section_answer {
@@ -643,7 +667,7 @@ footer {
     align-items: center;
     justify-content: space-between;
     gap: 0 10px;
-    height: 176px;
+    min-height: 176px;
     max-width: 1320px;
     margin: auto;
     padding: 0 20px;
@@ -677,6 +701,102 @@ footer {
     border: none;
     border-radius: 10px;
     cursor: pointer;
+}
+
+@media (max-width: 576px)  {
+
+    .header-title span:nth-child(1) {
+        font-size: 32px;
+    }
+
+    .header-title span:nth-child(3) {
+        font-size: 28px;
+    }
+
+    .header-title span:nth-child(5) {
+        font-size: 30px;
+    }
+
+    .header-title {
+        margin-bottom: 32px;
+    }
+
+    .header-benefits {
+        margin-top: 32px;
+    }
+
+
+    .benefits-section_subtitle {
+        padding: 0;
+    }
+
+    .benefits-section_benefit-card {
+        width: 100%;
+    }
+
+
+    .manufacturers-section_container .swiper-container {
+        padding: 0 20px;
+    }
+
+
+    .manufacturers-section_container .swiper-button-prev {
+        left: 0;
+    }
+
+    .manufacturers-section_container .swiper-button-next {
+        right: 0;
+    }
+
+    .how-it-works-item {
+        padding: 38px 26px;
+        background-size: 100% 100%;
+    }
+
+    .how-it-works-item_text {
+        margin-top: 12px;
+        padding-left: 0;
+    }
+
+    .how-it-works-item.item-1 {
+        width: 440px;
+        margin: 0;
+        background-image: url("../images/howItWorks/item_1_m.svg");
+    }
+
+    .how-it-works-item.item-2,
+    .how-it-works-item.item-3,
+    .how-it-works-item.item-5,
+    .how-it-works-item.item-6 {
+        width: 440px;
+        margin: 0;
+        background-image: url("../images/howItWorks/item_2_m.svg");
+    }
+
+    .how-it-works-item.item-4 {
+        width: 440px;
+        order: 2;
+        margin: 0;
+        background-image: url("../images/howItWorks/item_3_m.svg");
+    }
+
+    .how-it-works-item.item-5 {
+        order: 1;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+        padding: 40px 20px;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px
+    }
+
+    
 }
 
 
