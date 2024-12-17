@@ -106,7 +106,7 @@ nav a {
     align-items: center;
     justify-content: space-between;
     max-width: 1320px;
-    margin: 54px auto 0;
+    margin: 34px auto 0;
     padding: 20px;
     z-index: 2;
     top: 0;
@@ -128,10 +128,9 @@ nav a {
     position: relative;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     gap: 32px;
     max-width: 1320px;
-    margin: 230px auto 0;
+    margin: 220px auto 0;
     padding: 0 20px 60px;
     z-index: 1;
 }
@@ -187,6 +186,7 @@ nav a {
     width: 380px;
     max-width: 100%;
     align-self: flex-start;
+    flex-shrink: 0;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -408,12 +408,12 @@ nav a {
 }
 
 .manufacturers-section_container .swiper-button-prev {
-    left: var(--swiper-navigation-sides-offset, -70px);
+    left: -50px;
     user-select: none;
 }
 
 .manufacturers-section_container .swiper-button-next {
-    right: var(--swiper-navigation-sides-offset, -70px);
+    right: -50px;
     user-select: none;
 }
 
@@ -708,7 +708,83 @@ footer {
     cursor: pointer;
 }
 
-@media (max-width: 576px)  {
+@media (max-width: 1400px) {
+    .manufacturers-section_container .swiper-container {
+        padding: 0 20px;
+    }
+
+    .manufacturers-section_container .swiper-button-prev {
+        left: 0;
+    }
+
+    .manufacturers-section_container .swiper-button-next {
+        right: 0;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .nav-container {
+        margin-top: 20px;
+    }
+
+    .nav-container.sticky {
+        margin-top: 0;
+        border-radius: 0;
+    }
+
+    .nav-container > img {
+        position: absolute;
+        top: 20px;
+    }
+
+    .nav-container .phone-number {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .nav-container nav {
+        max-width: none;
+        margin: 0;
+        flex-grow: 1;
+        padding-top: 60px;
+    }
+
+    .header-title span:nth-child(1) {
+        font-size: 54px;
+    }
+
+    .header-title span:nth-child(3) {
+        font-size: 46px;
+    }
+
+    .header-title span:nth-child(5) {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .header-main-content {
+        flex-wrap: wrap;
+    }
+
+    .header-main-content > div:first-child {
+        width: 100%;
+    }
+
+    .header-title {
+        text-align: center;
+        margin-bottom: 32px;
+    }
+
+    .feedback-form {
+        margin: auto;
+    }
+}
+
+@media (max-width: 768px)  {
 
     .nav-container {
         display: none;
@@ -814,60 +890,23 @@ footer {
     }
 
     .header-main-content  {
-        margin-top: 80px;
+        margin-top: 120px;
     }
 
     .header-title span:nth-child(1) {
-        font-size: 32px;
-    }
-
-    .header-title span:nth-child(3) {
-        font-size: 28px;
+        font-size: 46px;
     }
 
     .header-title span:nth-child(5) {
-        font-size: 30px;
-    }
-
-    .header-title {
-        margin-bottom: 32px;
-        text-align: center;
-    }
-
-    .header-benefits {
-        margin-top: 32px;
-    }
-
-    .feedback-form {
-        margin: auto;
-    }
-
-
-    .benefits-section_subtitle {
-        padding: 0;
+        font-size: 44px;
     }
 
     .benefits-section_benefit-card {
-        width: 100%;
-    }
-
-
-    .manufacturers-section_container .swiper-container {
-        padding: 0 20px;
-    }
-
-
-    .manufacturers-section_container .swiper-button-prev {
-        left: 0;
-    }
-
-    .manufacturers-section_container .swiper-button-next {
-        right: 0;
+        width: calc(50% - 20px);
     }
 
     .how-it-works-item {
         padding: 38px 26px;
-        background-size: 100% 100%;
     }
 
     .how-it-works-item_text {
@@ -913,7 +952,126 @@ footer {
         gap: 16px
     }
 
-    
+}
+
+
+@media (max-width: 576px)  {
+
+    .header-main-content  {
+        margin-top: 80px;
+    }
+
+    .header-title span:nth-child(1) {
+        font-size: 32px;
+    }
+
+    .header-title span:nth-child(3) {
+        font-size: 28px;
+    }
+
+    .header-title span:nth-child(5) {
+        font-size: 30px;
+    }
+
+    .header-benefits {
+        margin-top: 32px;
+    }
+
+    .benefits-section_subtitle {
+        padding: 0;
+    }
+
+    .benefits-section_benefit-card {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 1200px) and (min-width: 768px) {
+    .footer-container {
+        position: relative;
+        padding-top: 70px;
+    }
+
+    .footer-container img {
+        position: absolute;
+        top: 30px;
+        width: 190px;
+        height: 58px;
+        object-fit: contain;
+    }
+
+    .footer-container button {
+        position: absolute;
+        top: 30px;
+        right: 20px;
+    }
+
+    .footer-container .footer-nav {
+        max-width: none;
+    }
+}
+
+
+@media (max-width: 992px) and (min-width: 768px) {
+    .how-it-works-items {
+        align-items: stretch;
+    }
+
+    .how-it-works-item {
+        max-width: 50%;
+        height: auto;
+        background-size: 100% 100%;
+    }
+
+    .how-it-works-item.item-1 {
+        margin-bottom: 36px;
+        background-image: url("../images/howItWorks/item_sm_left.svg");
+    }
+
+    .how-it-works-item.item-2 {
+        padding-bottom: 60px;
+        padding-left: 66px;
+        background-position: top left 26px;
+        background-size: calc(100% - 26px) 100%;
+        background-image: url("../images/howItWorks/item_sm_right_corner.svg");
+    }
+
+    .how-it-works-item.item-3 {
+        order: 2;
+        width: 440px;
+        margin-bottom: 36px;
+        padding-left: 66px;
+        background-image: url("../images/howItWorks/item_sm_right_corner_2.svg");
+    }
+
+    .how-it-works-item.item-4 {
+        order: 4;
+        width: 440px;
+        height: auto;
+        margin-left: -10px;
+        padding-left: 66px;
+        background-position: top left 26px;
+        background-size: calc(100% - 26px) 100%;
+        background-image: url("../images/howItWorks/item_sm_right.svg");
+    }
+
+    .how-it-works-item.item-5 {
+        order: 3;
+        height: auto;
+        margin-left: 0;
+        background-image: url("../images/howItWorks/item_sm_left_corner_2.svg");
+    }
+
+    .how-it-works-item.item-6 {
+        order: 1;
+        height: auto;
+        margin-left: 0;
+        padding-bottom: 60px;
+        background-position: top right 26px;
+        background-size: calc(100% - 26px) 100%;
+        background-image: url("../images/howItWorks/item_sm_left_corner.svg");
+    }
 }
 
 
