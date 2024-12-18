@@ -930,6 +930,7 @@ footer {
     .how-it-works-item.item-5,
     .how-it-works-item.item-6 {
         width: 440px;
+        height: 300px;
         margin: 0;
         background-image: url("../images/howItWorks/item_2_m.svg");
     }
