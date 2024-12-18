@@ -709,6 +709,11 @@ footer {
 }
 
 @media (max-width: 1400px) {
+
+    .how-it-works-item {
+        background-size: 100% 100%;
+    }
+
     .manufacturers-section_container .swiper-container {
         padding: 0 20px;
     }
@@ -983,6 +988,34 @@ footer {
 
     .benefits-section_benefit-card {
         width: 100%;
+    }
+
+}
+
+@media (max-width: 1400px) and (min-width: 992px) {
+
+    .how-it-works-item {
+        height: auto;
+        max-width: calc(33% + 8px);
+    }
+
+    .how-it-works-item.item-1 {
+        margin-bottom: 36px;
+    }
+
+    .how-it-works-item.item-2 {
+        margin-bottom: 36px;
+    }
+
+    .how-it-works-item.item-3,
+    .how-it-works-item.item-4 {
+        max-width: calc(33% - 16px);
+    }
+
+    .how-it-works-item.item-4,
+    .how-it-works-item.item-5,
+    .how-it-works-item.item-6 {
+        height: auto;
     }
 
 }
