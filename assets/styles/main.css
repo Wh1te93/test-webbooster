@@ -923,7 +923,7 @@ footer {
     .how-it-works-item.item-1 {
         width: 440px;
         margin: 0;
-        background-image: url("../images/howItWorks/item_1_m.svg");
+        background-image: url("../images/howItWorks/item_1_m.png");
     }
 
     .how-it-works-item.item-2,
@@ -933,14 +933,14 @@ footer {
         width: 440px;
         height: 300px;
         margin: 0;
-        background-image: url("../images/howItWorks/item_2_m.svg");
+        background-image: url("../images/howItWorks/item_2_m.png");
     }
 
     .how-it-works-item.item-4 {
         width: 440px;
         order: 2;
         margin: 0;
-        background-image: url("../images/howItWorks/item_3_m.svg");
+        background-image: url("../images/howItWorks/item_3_m.png");
     }
 
     .how-it-works-item.item-5 {
