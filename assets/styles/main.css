@@ -805,7 +805,7 @@ footer {
         padding:  20px;
         background-repeat: no-repeat;
         background-position-x:center ;
-        z-index: 2;
+        z-index: 100;
     }
 
     .mobile-nav-container.sticky {
@@ -826,7 +826,7 @@ footer {
         margin: 0;
         background-color: #07086C;
         padding: 20px;
-        box-shadow:  0px 18px 20px 0px #6A32B4;
+        box-shadow:  0 18px 20px 0 #6A32B4;
     }
 
     .mobile-nav-container nav a{
